@@ -4,13 +4,23 @@ import { Link, useParams } from 'react-router-dom';
 
 export default function Home() {
     const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     useEffect(()=>{
         loadUsers();
     },[]);
     const {id} = useParams();
     const loadUsers = async()=>{
-        const result = await axios.get("http://localhost:8080/users");
-        setUsers(result.data);
+        try{
+            const result = await axios.get("http://localhost:8080/users");
+            setUsers(result.data);
+        }catch (error){
+            console.error("Fail to load user", error);
+        }finally{
+            setLoading(false);
+        }
+
+
     }
     const deleteUser = async(id)=>{
         await axios.delete(`http://localhost:8080/user/${id}`);
@@ -19,6 +29,13 @@ export default function Home() {
   return (
     <div className='container'>
         <div className='py-4'>
+        {loading ? (
+            <div className='text-center my-5'>
+                <div className='spinner-border text-primary' role='status'>
+                    
+                </div>
+            </div>
+        ): (
         <table className="table border shadow">
             <thead className='border-dark'>
                 <tr>
@@ -52,6 +69,8 @@ export default function Home() {
                  
             </tbody>
         </table>
+
+        )}
         </div>
     </div>
   )

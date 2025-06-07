@@ -32,12 +32,12 @@ export default function Edituser() {
         <div className='row'>
             <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow'>
                 <h2 className='text-center m-4 '>Edit User</h2>
-                <form onSubmit={(e)=>onSubmit(e)}>
+                {/* <form onSubmit={(e)=>onSubmit(e)}>
 
                 
                 <div className='mb-3'>
-                    <label htmlFor='Name' className='form-label'>
-                        Name
+                    <label htmlFor='Name' className='form-label fw-semibold'>
+                        Name 
                     </label> 
                     <input
                         type={"text"}
@@ -50,7 +50,7 @@ export default function Edituser() {
 
                 </div>
                 <div className='mb-3'>
-                    <label htmlFor='Username' className='form-label'>
+                    <label htmlFor='Username' className='form-label fw-semibold'>
                         Username
                     </label> 
                     <input
@@ -64,7 +64,7 @@ export default function Edituser() {
 
                 </div>
                 <div className='mb-3'>
-                    <label htmlFor='Email' className='form-label'>
+                    <label htmlFor='Email' className='form-label fw-semibold'>
                         Email
                     </label> 
                     <input
@@ -78,7 +78,7 @@ export default function Edituser() {
                 </div>
                 <button type='submit' className='btn btn-outline-primary'>Submit</button>
                 <Link className='btn btn-outline-danger mx-2' to="/">Cancel</Link>
-                </form>
+                </form> */}
             </div>
         </div>
     </div>

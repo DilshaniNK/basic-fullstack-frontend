@@ -23,6 +23,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.hover-move {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-move:hover {
+  transform: translateY(-5px); /* move slightly up */
+  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2); /* deeper shadow on hover */
+}
 
 .App-link {
   color: #61dafb;
