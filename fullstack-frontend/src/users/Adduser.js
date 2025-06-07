@@ -71,6 +71,20 @@ export default function Adduser() {
                     onChange={(e) => onInputChange(e)}
                   />
                 </div>
+                {/* add new for checking */}
+                <div className='mb-3'>
+                  <label htmlFor='Name' className='text-start d-block fw-semibold'>
+                    E-mail
+                  </label>
+                  <input
+                    type={"text"}
+                    className='form-control'
+                    placeholder='Enter your e-mail address'
+                    name='email'
+                    value={email}
+                    onChange={(e) => onInputChange(e)}
+                  />
+                </div>
                 
                 <button type='submit' className='btn btn-outline-primary'>Submit</button>
                 <Link className='btn btn-outline-danger mx-2' to="/">Cancel</Link>
